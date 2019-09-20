@@ -1,4 +1,17 @@
-<h1>Heroes</h1>
+{{ heroes.length }} {{ heroes?.length }}
+<div *ngIf="heroes.length == 0">
+    <div class="container">
+        <span class="alert alert-primary" role="alert">No hay coincidencias</span>
+    </div>
+
+</div>
+<div *ngIf="(heroes.length > 0)">
+    mayor a zero
+</div>
+
+<h1>
+    Heroes
+</h1>
 
 <hr>
 
@@ -12,8 +25,8 @@
             <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
 
             <button (click)="verHeroe(i)" class="btn btn-outline-primary btn-block">
-                Ver más
-            </button>
+                            Ver más
+                        </button>
 
             <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary btn-block">Ver más</a> esta opcion no necesta func y routernavigate en el comp-->
         </div>

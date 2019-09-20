@@ -70,15 +70,20 @@ export class HeroesService {
     }
 
     buscarHeroes( termino: string ): Heroe[] {
-      console.log('entro buscarHeroes..')
+      console.log('entro buscarHeroes..'+termino);
       let heroesArr: Heroe[] = [];
-
-      termino = termino.toLowerCase();
-
-      for ( let heroe of this.heroes ){
-        let nombre = heroe.nombre.toLowerCase();
-        if( nombre.indexOf( termino) >= 0 ){
-          heroesArr.push( heroe );
+      
+      if( termino !== undefined ) {
+        console.log('buscaHeroes 2..');
+        termino = termino.toLowerCase();
+  
+        for ( let heroe of this.heroes ){
+          let nombre = heroe.nombre.toLowerCase();
+          if( nombre.indexOf( termino) >= 0 ){
+            console.log('mach..');
+            heroesArr.push( heroe );
+            console.log( heroesArr );
+          }
         }
       }
       return heroesArr;
