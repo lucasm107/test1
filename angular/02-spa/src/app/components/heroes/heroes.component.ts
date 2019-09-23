@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { HeroesService, Heroe  } from '../../servicios/heroes.service';
 import { Router } from '@angular/router';
 
@@ -11,10 +12,17 @@ export class HeroesComponent implements OnInit {
   
   heroes: Heroe[] = [];
   constructor( 
-    private _heroesService: HeroesService, 
-    private router: Router 
-    ){
+    private activatedRoute: ActivatedRoute,
+    private _heroesService: HeroesService,
+    private router: Router
+    ) {
+
     console.log( 'Constructor');
+    this.activatedRoute.params.subscribe( params => {
+      console.log( params['term'] );
+      this.heroes = this._heroesService.buscarHeroes( params['term'] );
+      console.log( this.heroes );
+    })
   }
 
   ngOnInit() {

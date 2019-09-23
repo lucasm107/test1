@@ -1,9 +1,40 @@
-<h1>Heroes</h1>
+{{ heroes.length }} {{ heroes?.length }}
+<div *ngIf="heroes.length == 0">
+    <div class="container">
+        <span class="alert alert-primary" role="alert">No hay coincidencias</span>
+    </div>
+
+</div>
+<div *ngIf="(heroes.length > 0)">
+    mayor a zero
+</div>
+
+<h1>
+    Heroes
+</h1>
 
 <hr>
 
 <div class="card-columns">
+<<<<<<< HEAD
     <!-- *ngFor="let heroe of heroes; let i = index" -->
     <app-heroe-tarjeta [heroe]="heroex" [index]="i" *ngFor="let heroex of heroes; let i = index"></app-heroe-tarjeta>
+=======
+
+    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+        <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{ heroe.nombre }}</h5>
+            <p class="card-text">{{ heroe.bio }}</p>
+            <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+            <button (click)="verHeroe(i)" class="btn btn-outline-primary btn-block">
+                            Ver más
+                        </button>
+
+            <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-primary btn-block">Ver más</a> esta opcion no necesta func y routernavigate en el comp-->
+        </div>
+    </div>
+>>>>>>> e8dac8f5eedeac8525bd2893f48e4f6c40d18dd7
 
 </div>
