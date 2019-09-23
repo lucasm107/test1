@@ -1,0 +1,92 @@
+<div class="container">
+<h1>Pipes</h1>
+
+<hr>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Variable</th>
+      <th scope="col">Pipe</th>
+      <th scope="col">Producto</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <th >{{ nombre }}</th>
+      <td> uppercase </td>
+      <td>{{ nombre | uppercase }}</td>
+    </tr>
+    <tr>
+      <th >{{ nombre }}</th>
+      <td> lowercase </td>
+      <td>{{ nombre | lowercase }}</td>
+    </tr>
+    <tr>
+      <th >{{ nombre }}</th>
+      <td> slice :3 </td>
+      <td>{{ nombre | slice:3 }}</td>
+    </tr>
+    <tr>
+      <th >{{ nombre }}</th>
+      <td> slice:0:3 </td>
+      <td>{{ nombre | slice:0:3 }}</td>
+    </tr>
+    <tr>
+      <th >{{ arreglo }}</th>
+      <td> slice:1:5 </td>
+      <td>{{ arreglo | slice:1:5 }}</td>
+    </tr>
+    <tr>
+        <th >{{ PI }}</th>
+        <td> number </td>
+        <td>{{ PI | number }}</td>
+      </tr>
+    <tr>
+        <th >{{ PI }}</th>
+        <td> number :'3.0-0'</td>
+        <td>{{ PI | number:'3.0-0' }}</td>
+    </tr>
+    <tr>
+        <th >{{ PI }}</th>
+        <td> number:'3.0-2' </td>
+        <td>{{ PI | number:'3.0-2' }}</td>
+    </tr>
+    <tr>
+        <th >{{ a }}</th>
+        <td> percent </td>
+        <td>{{ a | percent }}</td>
+    </tr>
+
+    <tr>
+        <th >{{ salario }}</th>
+        <td> currency </td>
+        <td>{{ salario | currency }}</td>
+    </tr>
+    <tr>
+        <th >{{ salario }}</th>
+        <td> currency </td>
+        <td>{{ salario | currency:'ARS':true }}</td>
+    </tr>
+    <tr>
+        <th >{{ salario }}</th>
+        <td> currency </td>
+        <td>{{ salario | currency:'ARS':true:'4.0-0' }}</td>
+    </tr>
+    <tr>
+        <th >{{ salario }}</th>
+        <td> number </td>
+        <td>{{ salario | number:'.2-2' }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h4>slice</h4>
+
+<ul>
+  <li *ngFor="let item of arreglo | slice:5:20">{{ item }}</li>
+</ul>
+</div>
