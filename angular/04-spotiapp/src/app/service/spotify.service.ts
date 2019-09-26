@@ -16,7 +16,7 @@ export class SpotifyService {
 
   getNewReleases(){
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQDqN7AZBDPlUxkEaGArtjrVbZoeM_gonon9OnM9ZeaZVDEpYATz-ZzhT2KhGyvxa27xMHA0zODB5YASBTk'
+      'Authorization': 'Bearer BQA-5qrhsgzpQISr3NpvRYzgP0WN8TYdGHaimiCXHUDiStOJSOsdthB00PhiGDO5XRyNRPbbg-5DkVNoNj8-ZzhT2KhGyvxa27xMHA0zODB5YASBTk'
     })
 
      return this.http.get( 'https://api.spotify.com/v1/browse/new-releases', { headers } )
@@ -28,7 +28,7 @@ export class SpotifyService {
   getArtistas( termino: string ){
 
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQDqN7AZBDPlUxkEaGArtjrVbZoeM_gonon9OnM9ZeaZVDEpYATz-ZzhT2KhGyvxa27xMHA0zODB5YASBTk'
+      'Authorization': 'Bearer BQA-5qrhsgzpQISr3NpvRYzgP0WN8TYdGHaimiCXHUDiStOJSOsdthB00PhiGDO5XRyNRPbbg-5DkVNoNj8-ZzhT2KhGyvxa27xMHA0zODB5YASBTk'
     })
 
     return this.http.get( `https://api.spotify.com/v1/search?q=${ termino }&type=artist&limit=15`, { headers } )
