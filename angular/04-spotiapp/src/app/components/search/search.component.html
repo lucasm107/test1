@@ -1,1 +1,21 @@
-<p>search works!</p>
+<div class="row">
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar( termino.value )" class="form-control" placeholder="buscar..">
+    </div>
+</div>
+
+<hr> {{ artistas }}
+<div class="card-columns">
+
+    <div *ngFor="let item of artistas" class="card">
+        <img class="card-img-top" [src]="item.images[0].url" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{ item.name }}
+
+            </h5>
+
+
+        </div>
+    </div>
+</div>
