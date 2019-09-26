@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
- 
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,6 +15,11 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 // rutas
 import { ROUTES } from './app.routes';
 
+//pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+
 //services
 //import { SpotifyService } from './service/spotify.service';
 
@@ -25,7 +30,10 @@ import { ROUTES } from './app.routes';
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe,
+    TarjetasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
