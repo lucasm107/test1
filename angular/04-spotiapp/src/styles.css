@@ -5,6 +5,10 @@ body {
     color: white !important;
 }
 
+.table {
+    color: #FFF;
+}
+
 hr {
     border-color: white;
 }
