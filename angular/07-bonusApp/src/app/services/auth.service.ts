@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class AuthService {
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts';
-  private api_key = 'AIzaSyACW6fS_ABDwDsLqjTDxHST5v-XyrPCXCg';
+  private api_key = ''; // keu firebase
 
   userToken: string;
 
